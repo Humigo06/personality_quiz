@@ -18,7 +18,6 @@ questions.forEach(function(question){
             let response = button.dataset.answer;
             // Stores response data in the userAnswers object
             userAnswers[questionID] = response;
-            console.log(userAnswers);
         });
     });
 });
@@ -104,7 +103,6 @@ function displayResult(answers){
         scores["Ranger"] += 2.1;
         scores["Rogue"] += 1;
     }
-    console.log(scores);
     // Finds the highest scored category
     let max = 0;
     let scoreValues = Object.values(scores);
