@@ -36,74 +36,75 @@ function displayResult(answers){
     let answerValues = Object.values(answers);
     // Question 1 answers
     if (answerValues[0] === "A") {
-        scores["Knight"] += 2;
+        scores["Knight"] += 2.1;
         scores["Mage"] += 1;
     } else if (answerValues[0] === "B") {
-        scores["Ranger"] += 2;
+        scores["Ranger"] += 2.1;
         scores["Bard"] += 1;
     } else if (answerValues[0] === "C") {
-        scores["Cleric"] += 2;
+        scores["Cleric"] += 2.1;
         scores["Rogue"] += 1;
     } else if (answerValues[0] === "D") {
-        scores["Mage"] += 2;
+        scores["Mage"] += 2.1;
         scores["Bard"] += 1;
     }
     // Question 2 answers
     if (answerValues[1] === "A") {
-        scores["Knight"] += 2;
+        scores["Knight"] += 2.1;
         scores["Rogue"] += 1;
     } else if (answerValues[1] === "B") {
-        scores["Mage"] += 2;
+        scores["Mage"] += 2.1;
         scores["Cleric"] += 1;
     } else if (answerValues[1] === "C") {
-        scores["Rogue"] += 2;
+        scores["Rogue"] += 2.1;
         scores["Ranger"] += 1;
     } else if (answerValues[1] === "D") {
-        scores["Bard"] += 2;
+        scores["Bard"] += 2.1;
         scores["Mage"] += 1;
     }
     // Question 3 answers
     if (answerValues[2] === "A") {
-        scores["Cleric"] += 2;
+        scores["Cleric"] += 2.1;
         scores["Knight"] += 1;
     } else if (answerValues[2] === "B") {
-        scores["Mage"] += 2;
+        scores["Mage"] += 2.1;
         scores["Ranger"] += 1;
     } else if (answerValues[2] === "C") {
-        scores["Bard"] += 2;
+        scores["Bard"] += 2.1;
         scores["Knight"] += 1;
     } else if (answerValues[2] === "D") {
-        scores["Knight"] += 2;
+        scores["Knight"] += 2.1;
         scores["Bard"] += 1;
     }
     // Questopm 4 answers
     if (answerValues[3] === "A") {
-        scores["Ranger"] += 2;
+        scores["Ranger"] += 2.1;
         scores["Cleric"] += 1;
     } else if (answerValues[3] === "B") {
-        scores["Bard"] += 2;
+        scores["Bard"] += 2.1;
         scores["Ranger"] += 1;
     } else if (answerValues[3] === "C") {
-        scores["Cleric"] += 2;
+        scores["Cleric"] += 2.1;
         scores["Ranger"] += 1;
     } else if (answerValues[3] === "D") {
-        scores["Rogue"] += 2;
+        scores["Rogue"] += 2.1;
         scores["Cleric"] += 1;
     }
     // Question 5 answers
     if (answerValues[4] === "A") {
-        scores["Mage"] += 2;
+        scores["Mage"] += 2.1;
         scores["Rogue"] += 1;
     } else if (answerValues[4] === "B") {
-        scores["Knight"] += 2;
+        scores["Knight"] += 2.1;
         scores["Cleric"] += 1;
     } else if (answerValues[4] === "C") {
-        scores["Rogue"] += 2;
+        scores["Rogue"] += 2.1;
         scores["Bard"] += 1;
     } else if (answerValues[4] === "D") {
-        scores["Ranger"] += 2;
+        scores["Ranger"] += 2.1;
         scores["Rogue"] += 1;
     }
+    console.log(scores);
     // Finds the highest scored category
     let max = 0;
     let scoreValues = Object.values(scores);
@@ -124,20 +125,8 @@ function displayResult(answers){
     let outputp = document.getElementById("result-text");
     outputp.textContent = result;
 };
+// Event listener for the show results button
 let showResult = document.getElementById("show-result");
 showResult.addEventListener("click", function() {
     displayResult(userAnswers);
 });
-
-
-
-/*
-let buttons = document.querySelectorAll("#question-block button");
-buttons.forEach(function(button){
-    button.addEventListener("click", function() {
-        buttons.forEach(function(btn) {
-            btn.classList.remove("selected");
-        });
-        button.classList.add("selected");
-    });
-});*/
